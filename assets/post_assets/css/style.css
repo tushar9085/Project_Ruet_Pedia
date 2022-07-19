@@ -1,0 +1,35 @@
+form textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 18px;
+    margin-top: 30px;
+    min-height: 100px;
+    border-radius: 2%;
+  }
+ 
+
+  .create-post{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .add-image-post{
+    margin-top: 20px;
+    
+  }
+
+  .post-button{
+    margin-top: 20px;
+    
+  }
+
+  .post-button button {
+    cursor: pointer;
+  }
+ 
+  .catagory-post{
+    margin-top: 20px;
+  }
