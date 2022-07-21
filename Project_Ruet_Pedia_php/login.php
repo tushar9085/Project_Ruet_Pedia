@@ -79,7 +79,7 @@ session_start();
     $image = $resultFecth['profile_picture'];
 
     if ($num == 1) {
-      $_SESSION['status'] = "Welcome " . $resultFecth['name'] . " To Your Account!" .$image ;
+      $_SESSION['status'] = "Welcome " . $resultFecth['name'] . " To Your Account!";
       $_SESSION['email'] = $email;
       $_SESSION['user_id'] = $user_id;
       $_SESSION['loggedin'] = true;

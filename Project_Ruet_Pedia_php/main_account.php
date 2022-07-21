@@ -7,6 +7,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 ?>
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,120 +145,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 	<div class="container">
 
-		<div class="instagram-card">
-			<div class="instagram-card-header">
-				<img src="assets/index_assets/img/demopic/4.jpg" class="instagram-card-user-image" />
-				<a class="instagram-card-user-name" href="https://www.instagram.com/followmeto/">User</a>
-
-			</div>
-
-			<div class="intagram-card-image">
-				<img class="img-insta-card" src="assets/index_assets/img/demopic/3.jpg">
-			</div>
-
-			<div class="instagram-card-content">
-				<p class="likes">Likes</p>
-				<p><a class="instagram-card-content-user" href="https://www.instagram.com/followmeto/">followmeto</a> So
-					excited to have made it to Lapland! Our first stop was sleeping inside a room made entirely of ice
-					at
-					the Kemi Snow Hotel 😱 Stoked that I've ticked this off my bucket list and never have to do it
-					again...
-					Let's just say the novelty of sleeping in -5 degrees temperature quickly wears off (but hey, it was
-					a
-					COOL experience nonetheless) 😜❄️ <a class="hashtag" href="https://www.instagram.com/explore/tags/visitkemi/">#visitkemi</a></p>
-				<p class="comments">Comments</p>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">sanguine.j@loaf_made</a>
-				wowwwwww</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">spainstakeoverWow</a> 😍</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">edieandottotravelsSo</a> cool
-				❄️</br>
-				<hr>
-			</div>
-
-			<div class="instagram-card-footer">
-				<a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
-				<input class="comments-input" type="text" placeholder="Add Comment" />
-				<a class="footer-action-icons" href="#"><i class="fa fa-ellipsis-h"></i></a>
-			</div>
-
-		</div>
-
-		<div class="instagram-card">
-			<div class="instagram-card-header">
-				<img src="assets/index_assets/img/demopic/1.jpg" class="instagram-card-user-image" />
-				<a class="instagram-card-user-name" href="https://www.instagram.com/followmeto/">User</a>
-
-			</div>
-
-			<div class="intagram-card-image">
-				<img class="img-insta-card" src="assets/index_assets/img/demopic/6.jpg">
-			</div>
-
-			<div class="instagram-card-content">
-				<p class="likes">Likes</p>
-				<p><a class="instagram-card-content-user" href="https://www.instagram.com/followmeto/">followmeto</a> So
-					excited to have made it to Lapland! Our first stop was sleeping inside a room made entirely of ice
-					at
-					the Kemi Snow Hotel 😱 Stoked that I've ticked this off my bucket list and never have to do it
-					again...
-					Let's just say the novelty of sleeping in -5 degrees temperature quickly wears off (but hey, it was
-					a
-					COOL experience nonetheless) 😜❄️ <a class="hashtag" href="https://www.instagram.com/explore/tags/visitkemi/">#visitkemi</a></p>
-				<p class="comments">Comments</p>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">sanguine.j@loaf_made</a>
-				wowwwwww</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">spainstakeoverWow</a> 😍</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">edieandottotravelsSo</a> cool
-				❄️</br>
-				<hr>
-			</div>
-
-			<div class="instagram-card-footer">
-				<a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
-				<input class="comments-input" type="text" placeholder="Add Comment" />
-				<a class="footer-action-icons" href="#"><i class="fa fa-ellipsis-h"></i></a>
-			</div>
-
-		</div>
-
-		<div class="instagram-card">
-			<div class="instagram-card-header">
-				<img src="assets/index_assets/img/demopic/4.jpg" class="instagram-card-user-image" />
-				<a class="instagram-card-user-name" href="https://www.instagram.com/followmeto/">User</a>
-
-			</div>
-
-			<div class="intagram-card-image">
-				<img class="img-insta-card" src="assets/index_assets/img/demopic/3.jpg">
-			</div>
-
-			<div class="instagram-card-content">
-				<p class="likes">Likes</p>
-				<p><a class="instagram-card-content-user" href="https://www.instagram.com/followmeto/">followmeto</a> So
-					excited to have made it to Lapland! Our first stop was sleeping inside a room made entirely of ice
-					at
-					the Kemi Snow Hotel 😱 Stoked that I've ticked this off my bucket list and never have to do it
-					again...
-					Let's just say the novelty of sleeping in -5 degrees temperature quickly wears off (but hey, it was
-					a
-					COOL experience nonetheless) 😜❄️ <a class="hashtag" href="https://www.instagram.com/explore/tags/visitkemi/">#visitkemi</a></p>
-				<p class="comments">Comments</p>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">sanguine.j@loaf_made</a>
-				wowwwwww</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">spainstakeoverWow</a> 😍</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">edieandottotravelsSo</a> cool
-				❄️</br>
-				<hr>
-			</div>
-
-			<div class="instagram-card-footer">
-				<a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
-				<input class="comments-input" type="text" placeholder="Add Comment" />
-				<a class="footer-action-icons" href="#"><i class="fa fa-ellipsis-h"></i></a>
-			</div>
-
-		</div>
-
+		<?php
+		include("php_files/main_acc_card.php");
+		?>
 
 		<!-- Begin Footer
 	 ================================================== -->

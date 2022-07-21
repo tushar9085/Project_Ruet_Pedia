@@ -66,7 +66,10 @@ session_start();
     $password = $_POST['password'];
     $roll = $_POST['roll'];
     $department = $_POST['department'];
-    $profile_picture = $_POST['profile_picture'];
+    $img_name = $_FILES['profile_picture']['name'];
+
+
+
 
 
 
@@ -83,6 +86,14 @@ session_start();
 
 
     if (!$exist) {
+      //Extracting image extension
+      $image_extension = pathinfo($img_name, PATHINFO_EXTENSION);
+      //changing the image name unique
+      $profile_picture = 'image_' . date("mjYHis") . '.' . $image_extension;
+      //moving the image into folder
+      move_uploaded_file($_FILES['profile_picture']['tmp_name'],'images/'.$profile_picture);
+     
+
       $sql = "INSERT INTO `ruet_pedia`.`user` (`name`, `email`, `password`, `roll`,`department`, `profile_picture`) 
                     VALUES ('$name', '$email', '$password', '$roll','$department', '$profile_picture');";
 
@@ -107,10 +118,10 @@ session_start();
           <img src="assets/index_assets/img/logo.png" alt="" height="30%" width="30%">
         </div>
       </a>
-      <form class="login-form" action="sign_up.php" method="post">
+      <form class="login-form" action="sign_up.php" method="post" enctype="multipart/form-data">
 
         <div class="field">
-          <input type="text" name="name" id="name" placeholder="Full Name *" required/>
+          <input type="text" name="name" id="name" placeholder="Full Name *" required />
         </div>
 
         <div class="field">

@@ -100,7 +100,6 @@ session_start();
 
 		$post_query_result = mysqli_query($conn, $post_query);
 
-		move_uploaded_file($_FILES['post_image']['tmp_name'], $target_for_image);
 
 
 		if ($post_query_result) {
@@ -110,8 +109,6 @@ session_start();
 			$_SESSION['status'] = "Something Went Wrong!";
 			header("location:post.php");
 		}
-
-		header("location:post.php");
 	}
 
 	?>
