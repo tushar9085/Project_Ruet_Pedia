@@ -1,0 +1,14 @@
+.readmore__content {
+    max-width: 45rem;
+    width: 100%;
+    display: flex;
+  }
+  
+  button.readmore__toggle {
+    display: flex;
+    border: none;
+    background: linear-gradient(120deg, rgb(181 181 181) 0%, rgb(185 185 185) 100%);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 1rem;
+  }

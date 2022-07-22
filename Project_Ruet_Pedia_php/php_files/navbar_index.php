@@ -24,11 +24,20 @@
 		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 	<!-- Additional CSS -->
+
+	<link rel="stylesheet" href="assets/carousel2_assets/fonts/icomoon/style.css">
+
+	<link rel="stylesheet" href="assets/carousel2_assets/css/owl.carousel.min.css">
+
+	<link rel="stylesheet" href="assets/carousel2_assets/css/style.css">
+
 	<link rel="stylesheet" href="assets/carousel_assets/css/main.css">
 	<link href="assets/index_assets/css/mediumish.css" rel="stylesheet">
 
 	<!-- Animate CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<link rel="stylesheet" href="assets/carousel2_assets/css/animate.css">
 
 </head>
 

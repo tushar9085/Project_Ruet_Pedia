@@ -106,8 +106,20 @@ include("php_files/navbar_index.php");
 
     </div>
 
+    <br>
+
+    <h4>
+        Recent Stories
+    </h4>
+    <hr>
 
 
-<?php
-include("php_files/footer_index.php");
-?>
+    <!-- carousel 2 -->
+    
+    <?php include("php_files/index_carousel2.php") ?>
+
+
+
+    <?php
+    include("php_files/footer_index.php");
+    ?>

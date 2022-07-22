@@ -16,7 +16,17 @@ if (!$conn) {
 ?>
 
 <?php
-$query = "SELECT * FROM post;";
+if(isset($_GET['cat_id']))
+{
+    $story_catagory_id = $_GET['cat_id'];
+    $query = "SELECT * FROM post WHERE story_catagory_id = $story_catagory_id;";
+}
+else
+{
+    $query = "SELECT * FROM post;";
+}
+
+
 $result = mysqli_query($conn, $query);
 $rows = mysqli_num_rows($result);
 
