@@ -95,14 +95,6 @@ h2 {
   flex: 0 0 50%;
   
 }
-
-.media-29101 .img img{
-  height: 100%;
-  width: 100%;
-  filter: brightness(50%) !important;
-
-}
-
 .media-29101 .text {
   padding: 50px;
 }

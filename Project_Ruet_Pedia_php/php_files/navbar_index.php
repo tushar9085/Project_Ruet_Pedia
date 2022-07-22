@@ -29,10 +29,11 @@
 
 	<link rel="stylesheet" href="assets/carousel2_assets/css/owl.carousel.min.css">
 
-	<link rel="stylesheet" href="assets/carousel2_assets/css/style.css">
+	
 
 	<link rel="stylesheet" href="assets/carousel_assets/css/main.css">
 	<link href="assets/index_assets/css/mediumish.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/carousel2_assets/css/style.css">
 
 	<!-- Animate CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">

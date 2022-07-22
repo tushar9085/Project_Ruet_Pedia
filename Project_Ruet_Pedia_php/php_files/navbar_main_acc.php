@@ -97,10 +97,9 @@ $rows = mysqli_num_rows($result);
                                     $catagory_id = $row['catagory_id'];
                                 ?>
 
-                                    <a class="dropdown-item" href="main_account.php?cat_id=<?php echo $catagory_id; ?>"><?php echo $catagory_name ?></a>
+                                    <a class="dropdown-item" href="?cat_id=<?php echo $catagory_id; ?>"><?php echo $catagory_name ?></a>
 
                                 <?php } ?>
-                         
                             </div>
                         </div>
                     </li>

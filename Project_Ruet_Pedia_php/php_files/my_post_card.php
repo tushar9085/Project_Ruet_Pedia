@@ -44,8 +44,19 @@ while ($row = mysqli_fetch_assoc($result)) {
     $post_image = $row['post_image'];
     $likes = $row['likes'];
     $comments = $row['comments'];
-
-    showAPost($user_name, $user_image, $post_title, $post_content, $post_image, $likes, $comments);
-}
-
 ?>
+
+
+    <div class="instagram-card">
+        <?php showAPost($user_name, $user_image, $post_title, $post_content, $post_image, $likes, $comments); ?>
+
+        <div class="instagram-card-footer">
+            <a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
+            <input class="comments-input" type="text" placeholder="Add Comment" />
+            <button style="margin:0px">Comment</button>
+        </div>
+    </div>
+
+
+
+<?php } ?>

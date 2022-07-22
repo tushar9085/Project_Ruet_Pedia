@@ -1,28 +1,16 @@
 <?php
 include("php_functions/showACard.php");
 
-$servername = "localhost";
-$username = "root";
-$password = "";
 
-//creating connection
-$conn = mysqli_connect($servername, $username, $password, "ruet_pedia");
-
-if (!$conn) {
-    die("connection error" . mysqli_connect_error());
-}
 
 
 ?>
 
 <?php
-if(isset($_GET['cat_id']))
-{
+if (isset($_GET['cat_id'])) {
     $story_catagory_id = $_GET['cat_id'];
     $query = "SELECT * FROM post WHERE story_catagory_id = $story_catagory_id;";
-}
-else
-{
+} else {
     $query = "SELECT * FROM post;";
 }
 
@@ -34,7 +22,6 @@ $rows = mysqli_num_rows($result);
 while ($row = mysqli_fetch_assoc($result)) {
 
     $user_id = $row['user_id'];
-
 
     $user_name_query = "SELECT name FROM user WHERE id=$user_id;";
     $user_name_result = mysqli_query($conn, $user_name_query);
@@ -52,8 +39,27 @@ while ($row = mysqli_fetch_assoc($result)) {
     $post_image = $row['post_image'];
     $likes = $row['likes'];
     $comments = $row['comments'];
-
-    showAPost($user_name, $user_image, $post_title, $post_content, $post_image, $likes, $comments);
-}
-
+    $post_id = $row['post_id'];
 ?>
+
+
+    <div class="instagram-card">
+        <?php showAPost($user_name, $user_image, $post_title, $post_content, $post_image, $likes, $comments); ?>
+
+        <div class="instagram-card-footer">
+            <a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
+            <form name="add-comment-form" action="main_account.php" method="post" style="display: flex;">
+
+                <input name="add_comment" class="comments-input" type="text" placeholder="Add Comment" />
+                <button name="post_comment" style="margin:0px" value="<?php echo $post_id; ?>">Comment</button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+<?php } ?>
+
+
+<?php include("php_files/add_comment.php")  ?>

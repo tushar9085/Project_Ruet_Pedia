@@ -53,7 +53,7 @@ session_start();
   $password = "";
 
   //creating connection
-  $conn = mysqli_connect($servername, $username, $password);
+  $conn = mysqli_connect($servername, $username, $password, "ruet_pedia");
 
   if (!$conn) {
     die("connection error" . mysqli_connect_error());
@@ -74,7 +74,7 @@ session_start();
 
 
     //Checking unique emails
-    $existSql = "SELECT * FROM `ruet_pedia`.`user` WHERE email = '$email';";
+    $existSql = "SELECT * FROM `user` WHERE email = '$email';";
     $existResult = mysqli_query($conn, $existSql);
     $existRow = mysqli_num_rows($existResult);
 
@@ -94,7 +94,7 @@ session_start();
       move_uploaded_file($_FILES['profile_picture']['tmp_name'],'images/'.$profile_picture);
      
 
-      $sql = "INSERT INTO `ruet_pedia`.`user` (`name`, `email`, `password`, `roll`,`department`, `profile_picture`) 
+      $sql = "INSERT INTO `user` (`name`, `email`, `password`, `roll`,`department`, `profile_picture`) 
                     VALUES ('$name', '$email', '$password', '$roll','$department', '$profile_picture');";
 
       $result = mysqli_query($conn, $sql);
