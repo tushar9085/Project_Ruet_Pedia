@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,9 +36,7 @@
     <!-- Begin Nav
 ================================================== -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
@@ -54,8 +56,7 @@
 
                     <li class="nav-item" class="dropbtn">
                         <div class="dropdown custom-dropdown">
-                            <a href="#" data-toggle="dropdown" class="nav-link align-items-center dropdown-link "
-                                data-offset="-70, 20">
+                            <a href="#" data-toggle="dropdown" class="nav-link align-items-center dropdown-link " data-offset="-70, 20">
                                 Stories
                                 <span class="arrow icon-keyboard_arrow_down"></span>
                             </a>
@@ -76,11 +77,11 @@
                         <a class="nav-link" href="post.php">Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="my_post.html">My Post</a>
+                        <a class="nav-link" href="my_post.php">My Post</a>
                     </li>
                     <li class="nav-item">
-						<a class="nav-link" href="logout.php">Log Out</a>
-					</li>
+                        <a class="nav-link" href="logout.php">Log Out</a>
+                    </li>
 
                 </ul>
 
@@ -91,8 +92,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
                     <span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">
-                            <path
-                                d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
+                            <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
                             </path>
                         </svg></span>
                 </form>
@@ -106,54 +106,9 @@
 
 
     <div class="container">
-        <?php
-        
-        for($i=0;$i<10;$i++)
-        {
 
-        
-        
-        ?>
-        <div class="instagram-card">
-			<div class="instagram-card-header">
-				<img src="assets/index_assets/img/demopic/1.jpg" class="instagram-card-user-image" />
-				<a class="instagram-card-user-name" href="https://www.instagram.com/followmeto/">User</a>
+        <?php include("php_files/my_post_card.php"); ?>
 
-			</div>
-
-			<div class="intagram-card-image">
-				<img class="img-insta-card" src="assets/index_assets/img/demopic/6.jpg">
-			</div>
-
-			<div class="instagram-card-content">
-				<p class="likes">Likes</p>
-				<p><a class="instagram-card-content-user" href="https://www.instagram.com/followmeto/">Title <br></a> So
-					excited to have made it to Lapland! Our first stop was sleeping inside a room made entirely of ice
-					at
-					the Kemi Snow Hotel 😱 Stoked that I've ticked this off my bucket list and never have to do it
-					again...
-					Let's just say the novelty of sleeping in -5 degrees temperature quickly wears off (but hey, it was
-					a
-					COOL experience nonetheless) 😜❄️ <a class="hashtag"
-						href="https://www.instagram.com/explore/tags/visitkemi/">#visitkemi</a></p>
-				<p class="comments">Comments</p>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">sanguine.j@loaf_made</a>
-				wowwwwww</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">spainstakeoverWow</a> 😍</br>
-				<br><a class="user-comment" href="https://www.instagram.com/anitzakm/">edieandottotravelsSo</a> cool
-				❄️</br>
-				<hr>
-			</div>
-
-			<div class="instagram-card-footer">
-				<a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
-				<input class="comments-input" type="text" placeholder="Add Comment" />
-				<a class="footer-action-icons" href="#"><i class="fa fa-ellipsis-h"></i></a>
-			</div>
-
-		</div>
-
-        <?php } ?>
         <!-- Begin Footer
 	 ================================================== -->
         <div class="footer">
@@ -173,9 +128,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/index_assets/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="assets/index_assets/js/bootstrap.min.js"></script>
     <script src="assets/index_assets/js/ie10-viewport-bug-workaround.js"></script>
 

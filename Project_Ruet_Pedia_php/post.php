@@ -159,7 +159,7 @@ session_start();
 						<a class="nav-link" href="post.php">Post</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="my_post.html">My Post</a>
+						<a class="nav-link" href="my_post.php">My Post</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="logout.php">Log Out</a>

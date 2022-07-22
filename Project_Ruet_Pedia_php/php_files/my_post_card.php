@@ -16,7 +16,9 @@ if (!$conn) {
 ?>
 
 <?php
-$query = "SELECT * FROM post;";
+$my_user_id = $_SESSION['user_id'];
+
+$query = "SELECT * FROM `post` WHERE user_id = $my_user_id;";
 $result = mysqli_query($conn, $query);
 $rows = mysqli_num_rows($result);
 
