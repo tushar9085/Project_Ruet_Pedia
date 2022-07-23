@@ -8,6 +8,9 @@ session_start();
 
     <?php include("php_files/my_post_card.php"); ?>
 
+
+
+
     <!-- Begin Footer
 	 ================================================== -->
     <div class="footer">

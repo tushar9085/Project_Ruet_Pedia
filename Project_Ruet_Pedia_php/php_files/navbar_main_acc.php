@@ -37,7 +37,8 @@ $rows = mysqli_num_rows($result);
 
 
     <!-- Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 
 
@@ -52,6 +53,10 @@ $rows = mysqli_num_rows($result);
     <link rel="stylesheet" href="assets/alerts/css/style.css">
 
     <link rel="stylesheet" href="assets/readmore_assets/css/style.css">
+
+
+    <!-- ajax like -->
+    <script type="text/javascript" src="assets/main_acc_assets/js/usingAjaxForLike.js"></script>
 
 
 </head>
