@@ -22,12 +22,15 @@ form textarea{
   }
 
   .post-button{
+    
     margin-top: 20px;
     
   }
 
   .post-button button {
     cursor: pointer;
+    background: #b2beb5;
+    border-radius: 4px;
   }
  
   .catagory-post{

@@ -108,10 +108,7 @@ include("php_files/navbar_index.php");
 
     <br>
 
-    <h4>
-        Recent Stories
-    </h4>
-    <hr>
+
 
 
     <!-- carousel 2 -->

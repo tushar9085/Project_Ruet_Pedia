@@ -8,7 +8,7 @@ function showAPost($user_name, $user_img, $post_title, $post_content, $post_img,
     </div>
 
     <div class="intagram-card-image">
-        <img class="img-insta-card" src="images/<?php echo $post_img; ?>">
+        <img class="img-insta-card" src="images/<?php echo $post_img; ?>" alt="No Image">
     </div>
 
     <div class="instagram-card-content">

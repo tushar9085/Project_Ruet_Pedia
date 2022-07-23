@@ -48,16 +48,10 @@ session_start();
   <!-- Popup Alert -->
 
   <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-
-  //creating connection
-  $conn = mysqli_connect($servername, $username, $password, "ruet_pedia");
-
-  if (!$conn) {
-    die("connection error" . mysqli_connect_error());
-  }
+  include("php_files/database_connection.php");
+  ?>
+  
+  <?php
 
 
   if (isset($_POST['signup'])) {
@@ -91,8 +85,8 @@ session_start();
       //changing the image name unique
       $profile_picture = 'image_' . date("mjYHis") . '.' . $image_extension;
       //moving the image into folder
-      move_uploaded_file($_FILES['profile_picture']['tmp_name'],'images/'.$profile_picture);
-     
+      move_uploaded_file($_FILES['profile_picture']['tmp_name'], 'images/' . $profile_picture);
+
 
       $sql = "INSERT INTO `user` (`name`, `email`, `password`, `roll`,`department`, `profile_picture`) 
                     VALUES ('$name', '$email', '$password', '$roll','$department', '$profile_picture');";

@@ -1,16 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-//creating connection
-$conn = mysqli_connect($servername, $username, $password, "ruet_pedia");
-
-if (!$conn) {
-    die("connection error" . mysqli_connect_error());
-}
+include("php_files/database_connection.php");
 ?>
-
 
 <?php
 $query = "SELECT * FROM story_catagory;";
@@ -53,10 +43,7 @@ $rows = mysqli_num_rows($result);
     <link rel="stylesheet" href="assets/alerts/css/style.css">
 
     <link rel="stylesheet" href="assets/readmore_assets/css/style.css">
-
-
-    <!-- ajax like -->
-    <script type="text/javascript" src="assets/main_acc_assets/js/usingAjaxForLike.js"></script>
+    <link rel="stylesheet" href="assets/post_assets/css/style.css">
 
 
 </head>

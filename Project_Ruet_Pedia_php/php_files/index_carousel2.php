@@ -1,56 +1,54 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-//creating connection
-$conn = mysqli_connect($servername, $username, $password, "ruet_pedia");
-
-if (!$conn) {
-    die("connection error" . mysqli_connect_error());
-}
-
-
+include("php_files/database_connection.php");
 ?>
 
+<?php
+$query = "SELECT * FROM post;";
+$result = mysqli_query($conn, $query);
+$rows = mysqli_num_rows($result);
+if ($rows > 4) { ?>
 
-<div class="owl-carousel owl-1">
+    <h4>
+        Recent Stories
+    </h4>
+    <hr>
 
-    <?php
-    $query = "SELECT * FROM post;";
-    $result = mysqli_query($conn, $query);
-    $rows = mysqli_num_rows($result);
+    <div class="owl-carousel owl-1">
 
 
-    for ($i = 0; $i < 5; $i++) {
+        <?php
 
-        $row = mysqli_fetch_assoc($result);
+        for ($i = 0; $i < 5; $i++) {
 
-        $post_title = $row['post_title'];
-        $post_content = $row['post_content'];
-        $post_image = $row['post_image'];
-        $likes = $row['likes'];
-        $comments = $row['comments'];
-    ?>
+            $row = mysqli_fetch_assoc($result);
 
-        <div class="content-carousel">
-            
-            <div class="media-29101 d-md-flex w-100">
-                <div class="img">
-                    <img src="images/<?php echo $post_image; ?>" alt="Image" class="img-fluid">
+            $post_title = $row['post_title'];
+            $post_content = $row['post_content'];
+            $post_image = $row['post_image'];
+            $likes = $row['likes'];
+            $comments = $row['comments'];
+        ?>
+
+            <div class="content-carousel">
+
+                <div class="media-29101 d-md-flex w-100">
+                    <div class="img">
+                        <img src="images/<?php echo $post_image; ?>" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="text">
+
+                        <h2><a href="#"><?php echo $post_title ?></a></h2>
+                        <p> <?php echo $post_content ?> </p>
+                    </div>
                 </div>
-                <div class="text">
 
-                    <h2><a href="#"><?php echo $post_title ?></a></h2>
-                    <p> <?php echo $post_content ?> </p>
-                </div>
+
+
             </div>
 
 
+        <?php } ?>
 
-        </div>
+    </div>
 
-
-    <?php } ?>
-
-</div>
+<?php } ?>
