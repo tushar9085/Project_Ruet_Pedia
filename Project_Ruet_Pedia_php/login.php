@@ -22,33 +22,11 @@ session_start();
 
 <body>
 
-  <!-- Popup Alert -->
-  <?php
-  if (isset($_SESSION['status'])) {
-  ?>
+<?php
 
-    <div class="alert alert-success" role="alert" id="popup-alert" style="display: block;">
+include("php_files/popup_alert.php");
 
-      <div class="alert-items" style="display: flex;justify-content: space-between;">
-        <div class="popup-message">
-          <?php echo $_SESSION['status']; ?>
-        </div>
-
-        <div class="close-button">
-          <button class="close-button" onclick="myFunction()">x</button>
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  <?php
-    unset($_SESSION['status']);
-  }
-  ?>
-  <!-- Popup Alert -->
+?>
 
   <?php
   include("php_files/database_connection.php");
