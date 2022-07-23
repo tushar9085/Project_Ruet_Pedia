@@ -1,5 +1,5 @@
 <?php
-function showAPost($user_name, $user_img, $post_title, $post_content, $post_img, $likes, $comments)
+function showAPost($user_name, $user_img, $post_title, $post_content, $post_img, $likes, $comments, $post_id)
 { ?>
 
     <div class="instagram-card-header">
@@ -14,7 +14,7 @@ function showAPost($user_name, $user_img, $post_title, $post_content, $post_img,
     <div class="instagram-card-content">
         <p class="likes"><?php echo $likes . " Likes" ?></p>
 
-        <h6><?php echo $post_title ?></h6>
+        <h5><?php echo $post_title ?></h5>
         <span class="dots">....</span>
         <span class="more">
             <?php echo $post_content ?>
@@ -25,6 +25,12 @@ function showAPost($user_name, $user_img, $post_title, $post_content, $post_img,
         <br>
 
         <p class="comments"><?php echo $comments . " Comments" ?></p>
+
+
+        <?php
+        include("php_files/show_comments.php");
+        ?>
+
 
 
     </div>
