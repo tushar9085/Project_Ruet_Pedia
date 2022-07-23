@@ -68,8 +68,8 @@ while ($row = mysqli_fetch_assoc($result)) {
         <div class="instagram-card-footer">
             <a class="footer-action-icons" href="#"><i class="fa fa-heart-o"></i></a>
             <form name="add-comment-form" action="main_account.php" method="post" style="display: flex;">
-
-                <input name="add_comment" class="comments-input" type="text" placeholder="Add Comment" />
+    
+                <input name="add_comment" class="comments-input" type="text" placeholder="Add Comment" style=" margin-right:10px;" />
                 <button name="post_comment" style="margin:0px" value="<?php echo $post_id; ?>">Comment</button>
 
             </form>
